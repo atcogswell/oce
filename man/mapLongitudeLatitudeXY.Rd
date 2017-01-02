@@ -19,7 +19,7 @@ be inferred from the first argument.}
 A list containing \code{x} and \code{y}.
 }
 \description{
-Find (x,y) values corresponding to (longitude, latitude) values, using the
+Find (x, y) values corresponding to (longitude, latitude) values, using the
 present projection.
 }
 \details{
@@ -29,7 +29,7 @@ This is mainly a wrapper around \code{\link{lonlat2map}}.
 \dontrun{
 library(oce)
 data(coastlineWorld)
-par(mfrow=c(2,1), mar=rep(2, 4))
+par(mfrow=c(2, 1), mar=rep(2, 4))
 mapPlot(coastlineWorld, projection="+proj=moll") # sets a projection
 xy <- mapLongitudeLatitudeXY(coastlineWorld)
 plot(xy, type='l', asp=1)
@@ -48,11 +48,10 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapContour}},
   \code{\link{mapDirectionField}}, \code{\link{mapGrid}},
   \code{\link{mapImage}}, \code{\link{mapLines}},
-  \code{\link{mapLocator}}, \code{\link{mapMeridians}},
-  \code{\link{mapPlot}}, \code{\link{mapPoints}},
-  \code{\link{mapPolygon}}, \code{\link{mapScalebar}},
-  \code{\link{mapText}}, \code{\link{mapTissot}},
-  \code{\link{mapZones}}, \code{\link{oceCRS}},
+  \code{\link{mapLocator}}, \code{\link{mapPlot}},
+  \code{\link{mapPoints}}, \code{\link{mapPolygon}},
+  \code{\link{mapScalebar}}, \code{\link{mapText}},
+  \code{\link{mapTissot}}, \code{\link{oceCRS}},
   \code{\link{shiftLongitude}}, \code{\link{utm2lonlat}}
 }
 

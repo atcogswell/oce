@@ -39,9 +39,8 @@ Adds arrows to an existing map, by analogy to \code{\link{arrows}}.
 \dontrun{
 library(oce)
 data(coastlineWorld)
-mapPlot(coastlineWorld, longitudelim=c(-130,-55), latitudelim=c(35,60),
-        proj="lambert", parameters=c(lat0=40,lat1=60),
-        orientation=c(90,-100,0))
+mapPlot(coastlineWorld, longitudelim=c(-120, -60), latitudelim=c(30, 60),
+        col="lightgray", projection="+proj=lcc +lon_0=-100")
 lon <- seq(-120, -75, 15)
 n <- length(lon)
 lat <- 45 + rep(0, n)
@@ -63,10 +62,9 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapImage}}, \code{\link{mapLines}},
   \code{\link{mapLocator}},
   \code{\link{mapLongitudeLatitudeXY}},
-  \code{\link{mapMeridians}}, \code{\link{mapPlot}},
-  \code{\link{mapPoints}}, \code{\link{mapPolygon}},
-  \code{\link{mapScalebar}}, \code{\link{mapText}},
-  \code{\link{mapTissot}}, \code{\link{mapZones}},
+  \code{\link{mapPlot}}, \code{\link{mapPoints}},
+  \code{\link{mapPolygon}}, \code{\link{mapScalebar}},
+  \code{\link{mapText}}, \code{\link{mapTissot}},
   \code{\link{oceCRS}}, \code{\link{shiftLongitude}},
   \code{\link{utm2lonlat}}
 }

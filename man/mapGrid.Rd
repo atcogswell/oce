@@ -61,7 +61,7 @@ this more analogous with \code{\link{grid}}.
 library(oce)
 data(coastlineWorld)
 mapPlot(coastlineWorld, type='l', grid=FALSE,
-longitudelim=c(-80,10), latitudelim=c(0,120),
+longitudelim=c(-80, 10), latitudelim=c(0, 120),
 projection="+proj=ortho")
 mapGrid(15, 15, polarCircle=15)
 }
@@ -79,10 +79,9 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapDirectionField}}, \code{\link{mapImage}},
   \code{\link{mapLines}}, \code{\link{mapLocator}},
   \code{\link{mapLongitudeLatitudeXY}},
-  \code{\link{mapMeridians}}, \code{\link{mapPlot}},
-  \code{\link{mapPoints}}, \code{\link{mapPolygon}},
-  \code{\link{mapScalebar}}, \code{\link{mapText}},
-  \code{\link{mapTissot}}, \code{\link{mapZones}},
+  \code{\link{mapPlot}}, \code{\link{mapPoints}},
+  \code{\link{mapPolygon}}, \code{\link{mapScalebar}},
+  \code{\link{mapText}}, \code{\link{mapTissot}},
   \code{\link{oceCRS}}, \code{\link{shiftLongitude}},
   \code{\link{utm2lonlat}}
 }

@@ -27,13 +27,12 @@ Adds points to an existing map, by analogy to \code{\link{points}}.
 }
 \examples{
 \dontrun{
-    library(oce)
-    data(coastlineWorld)
-    mapPlot(coastlineWorld, type='l', grid=TRUE,
-    longitudelim=c(-80,0), latitudelim=c(20,50),
-    projection="+proj=merc", orientation=c(90,0,0))
-    data(section)
-    mapPoints(section)
+library(oce)
+data(coastlineWorld)
+mapPlot(coastlineWorld, longitudelim=c(-80, 0), latitudelim=c(20, 50),
+        col="lightgray", projection="+proj=laea +lon_0=-35")
+data(section)
+mapPoints(section)
 }
 
 }
@@ -53,10 +52,9 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapImage}}, \code{\link{mapLines}},
   \code{\link{mapLocator}},
   \code{\link{mapLongitudeLatitudeXY}},
-  \code{\link{mapMeridians}}, \code{\link{mapPlot}},
-  \code{\link{mapPolygon}}, \code{\link{mapScalebar}},
-  \code{\link{mapText}}, \code{\link{mapTissot}},
-  \code{\link{mapZones}}, \code{\link{oceCRS}},
+  \code{\link{mapPlot}}, \code{\link{mapPolygon}},
+  \code{\link{mapScalebar}}, \code{\link{mapText}},
+  \code{\link{mapTissot}}, \code{\link{oceCRS}},
   \code{\link{shiftLongitude}}, \code{\link{utm2lonlat}}
 }
 

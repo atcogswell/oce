@@ -83,8 +83,8 @@ p <- seq(0, 45, 1)
 ctd2 <- ctdDecimate(ctd, p=p)
 lines(ctd2[["salinity"]], ctd2[["pressure"]], col="blue")
 p <- seq(0, 45, 1)
-ctd3 <- ctdDecimate(ctd, p=p, method=function(x,y,xout)
-                    predict(smooth.spline(x, y, df=30), p)$y)
+ctd3 <- ctdDecimate(ctd, p=p, method=function(x, y, xout)
+                    predict(smooth.spline(x, y, df=30), xout)$y)
 lines(ctd3[["salinity"]], ctd3[["pressure"]], col="red")
 
 
@@ -104,10 +104,9 @@ CTD objects, and also outlines the other functions dealing with them.
 Other things related to \code{ctd} data: \code{\link{[[,ctd-method}},
   \code{\link{[[<-,ctd-method}}, \code{\link{as.ctd}},
   \code{\link{cnvName2oceName}}, \code{\link{ctd-class}},
-  \code{\link{ctdAddColumn}},
   \code{\link{ctdFindProfiles}}, \code{\link{ctdRaw}},
-  \code{\link{ctdTrim}}, \code{\link{ctdUpdateHeader}},
-  \code{\link{ctd}}, \code{\link{handleFlags,ctd-method}},
+  \code{\link{ctdTrim}}, \code{\link{ctd}},
+  \code{\link{handleFlags,ctd-method}},
   \code{\link{plot,ctd-method}}, \code{\link{plotProfile}},
   \code{\link{plotScan}}, \code{\link{plotTS}},
   \code{\link{read.ctd.itp}}, \code{\link{read.ctd.odf}},

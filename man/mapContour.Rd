@@ -46,15 +46,13 @@ library(oce)
 data(coastlineWorld)
 par(mar=rep(1, 4))
 ## Arctic 100m, 2km, 3km isobaths, showing shelves and ridges.
-mapPlot(coastlineWorld,
-        latitudelim=c(60,120), longitudelim=c(-130,-50),
-        proj="stereographic", orientation=c(90, -90, 0),
-axes=FALSE, fill='lightgray')
+mapPlot(coastlineWorld, latitudelim=c(60, 120), longitudelim=c(-130,-50),
+        projection="+proj=stere +lat_0=90")
 data(topoWorld)
 lon <- topoWorld[['longitude']]
 lat <- topoWorld[['latitude']]
 z <- topoWorld[['z']]
-mapContour(lon, lat, z, levels=c(-100, -2000, -3000),col=1:3,lwd=2)
+mapContour(lon, lat, z, levels=c(-100, -2000, -3000), col=1:3, lwd=2)
 }
 }
 \author{
@@ -70,10 +68,9 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapImage}}, \code{\link{mapLines}},
   \code{\link{mapLocator}},
   \code{\link{mapLongitudeLatitudeXY}},
-  \code{\link{mapMeridians}}, \code{\link{mapPlot}},
-  \code{\link{mapPoints}}, \code{\link{mapPolygon}},
-  \code{\link{mapScalebar}}, \code{\link{mapText}},
-  \code{\link{mapTissot}}, \code{\link{mapZones}},
+  \code{\link{mapPlot}}, \code{\link{mapPoints}},
+  \code{\link{mapPolygon}}, \code{\link{mapScalebar}},
+  \code{\link{mapText}}, \code{\link{mapTissot}},
   \code{\link{oceCRS}}, \code{\link{shiftLongitude}},
   \code{\link{utm2lonlat}}
 }

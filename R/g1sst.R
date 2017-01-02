@@ -37,7 +37,7 @@ setClass("g1sst", contains="satellite")
 setMethod(f="[[",
           signature(x="g1sst", i="ANY", j="ANY"),
           definition=function(x, i, j, ...) {
-              callNextMethod()
+              callNextMethod()         # [[
           })
 
 #' @title Replace Parts of a G1SST Object
@@ -46,8 +46,8 @@ setMethod(f="[[",
 #' @family things related to \code{g1sst} data
 setMethod(f="[[<-",
           signature(x="g1sst", i="ANY", j="ANY"),
-          definition=function(x, i, j, value) {
-              callNextMethod(x=x, i=i, j=j, value=value)
+          definition=function(x, i, j, ..., value) {
+              callNextMethod(x=x, i=i, j=j, ...=..., value=value) # [[<-
           })
 
 
@@ -100,7 +100,7 @@ setMethod(f="[[<-",
 read.g1sst <- function(filename)
 {
     if (!requireNamespace("ncdf4", quietly=TRUE))
-        stop('must install.packages("ncdf4") to read argo data')
+        stop('must install.packages("ncdf4") to read g1sst data')
     f <- ncdf4::nc_open(filename)
     res <- new("g1sst", filename=filename)
     res@metadata$longitude <- ncdf4::ncvar_get(f, "longitude")

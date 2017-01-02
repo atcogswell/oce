@@ -30,10 +30,10 @@ self-explanatory.
 \dontrun{
 library(oce)
 data(coastlineWorld)
-par(mfrow=c(1,1), mar=c(2, 2, 1, 1))
+par(mfrow=c(1, 1), mar=c(2, 2, 1, 1))
 p  <- "+proj=aea +lat_1=10 +lat_2=60 +lon_0=-45"
 mapPlot(coastlineWorld, projection=p, fill="gray",
-longitudelim=c(-90,0), latitudelim=c(0,50))
+longitudelim=c(-90,0), latitudelim=c(0, 50))
 mapTissot(c(15, 15), col='red')
 }
 }
@@ -56,10 +56,9 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapImage}}, \code{\link{mapLines}},
   \code{\link{mapLocator}},
   \code{\link{mapLongitudeLatitudeXY}},
-  \code{\link{mapMeridians}}, \code{\link{mapPlot}},
-  \code{\link{mapPoints}}, \code{\link{mapPolygon}},
-  \code{\link{mapScalebar}}, \code{\link{mapText}},
-  \code{\link{mapZones}}, \code{\link{oceCRS}},
+  \code{\link{mapPlot}}, \code{\link{mapPoints}},
+  \code{\link{mapPolygon}}, \code{\link{mapScalebar}},
+  \code{\link{mapText}}, \code{\link{oceCRS}},
   \code{\link{shiftLongitude}}, \code{\link{utm2lonlat}}
 }
 

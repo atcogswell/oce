@@ -36,21 +36,6 @@ Plot a polygon on an existing map.
 Adds a polygon to an existing map, by analogy to
 \code{\link{polygon}}.  Used by \code{\link{mapImage}}.
 }
-\examples{
-\dontrun{
-library(oce)
-data(coastlineWorld)
-mapPlot(coastlineWorld, type='l',
-        longitudelim=c(-70,-50), latitudelim=c(40,50),
-        proj="polyconic", orientation=c(90, -90,0), grid=TRUE)
-data(topoWorld)
-tlon <- topoWorld[['longitude']][550:650]
-tlat <- topoWorld[['latitude']][240:300]
-z <- topoWorld[['z']][550:650, 240:300]
-mapImage(tlon, tlat, z)
-mapLines(coastlineWorld[['longitude']], coastlineWorld[['latitude']])
-}
-}
 \author{
 Dan Kelley
 }
@@ -65,10 +50,9 @@ Other functions related to maps: \code{\link{lonlat2map}},
   \code{\link{mapImage}}, \code{\link{mapLines}},
   \code{\link{mapLocator}},
   \code{\link{mapLongitudeLatitudeXY}},
-  \code{\link{mapMeridians}}, \code{\link{mapPlot}},
-  \code{\link{mapPoints}}, \code{\link{mapScalebar}},
-  \code{\link{mapText}}, \code{\link{mapTissot}},
-  \code{\link{mapZones}}, \code{\link{oceCRS}},
+  \code{\link{mapPlot}}, \code{\link{mapPoints}},
+  \code{\link{mapScalebar}}, \code{\link{mapText}},
+  \code{\link{mapTissot}}, \code{\link{oceCRS}},
   \code{\link{shiftLongitude}}, \code{\link{utm2lonlat}}
 }
 
